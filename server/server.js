@@ -14,24 +14,26 @@ app.use(express.json());
 app.use(cors());
 
 // Home route
-app.get("/", (req, res) => {
-  res.status(200).send({
-    message: "Server is running",
-  });
-});
+ if (process.env.NODE_ENV !== "production") {
+    app.get("/", (req, res) => {
+      res.status(200).send({
+        message: "Server is running (DEV)",
+      });
+    });
+  }
 // ROUTES
 // USER Route
 app.use("/api/v1/user", require("./routes/userRoutes"));
 
 // static files
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/dist")));
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../client/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
-  });
-}
-
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+    });
+  }
+  
 // listen the server
 const startServer = async () => {
   await connectDB(); // Connect to DB
