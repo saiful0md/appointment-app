@@ -1,8 +1,5 @@
 node_modules/
-# client/dist/
-*.env
+client/dist/
+.env
 server/.env
-logs
 *.log
-.vscode/
-.DS_Store
