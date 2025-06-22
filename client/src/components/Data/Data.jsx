@@ -37,17 +37,17 @@ export const adminMenu = [
     },
     {
         name: 'Doctors',
-        path: '/doctors',
+        path: 'doctors',
         icon: FaUserDoctor
     },
     {
         name: 'Users',
-        path: '/users',
+        path: 'users',
         icon: FaUsers
     },
     {
         name: 'Profile',
-        path: '/profile',
+        path: 'profile',
         icon: FaUser
     },
 
