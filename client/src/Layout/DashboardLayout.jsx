@@ -52,11 +52,11 @@ const DashboardLayout = () => {
         {/* Content */}
         <div className="flex-1 w-full">
           <div className="mb-4 flex items-center gap-2 justify-end">
-            <Link to={'/dashboard/notification'} className="btn rounded-full">
+            <Link to={'notification'} className="btn rounded-full">
               <FaBell className="cursor-pointer" />
               <div className="badge badge-sm badge-secondary">{user && user?.notification.length}</div>
             </Link>
-            <Link to={'/dashboard/profile'} className="text-black text-md font-semibold uppercase">{user?.name}</Link>
+            <Link to={'profile'} className="text-black text-md font-semibold uppercase">{user?.name}</Link>
           </div>
           <Outlet />
         </div>
