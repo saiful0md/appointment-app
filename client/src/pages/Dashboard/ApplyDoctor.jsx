@@ -5,8 +5,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Layout from "../components/Layout";
-import { hideLoading, showLoading } from "../redux/Featurse/LoadingSlice";
+import { hideLoading, showLoading } from "../../redux/Featurse/LoadingSlice";
 
 const ApplyDoctor = () => {
     const { register, handleSubmit, control, formState: { errors } } = useForm();
@@ -34,7 +33,7 @@ const ApplyDoctor = () => {
     };
 
     return (
-        <Layout>
+        <>
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="max-w-4xl mx-auto p-6 bg-white rounded shadow"
@@ -204,7 +203,7 @@ const ApplyDoctor = () => {
                     Submit
                 </button>
             </form>
-        </Layout>
+        </>
     );
 };
 

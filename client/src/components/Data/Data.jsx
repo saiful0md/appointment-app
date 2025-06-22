@@ -11,17 +11,17 @@ export const userMenu = [
     },
     {
         name: 'Profile',
-        path: '/profile',
+        path: 'profile',
         icon: FaUser
     },
     {
         name: 'Appointment',
-        path: '/appointment',
+        path: 'appointment',
         icon: FaList
     },
     {
         name: 'Apply Doctor',
-        path: '/apply-doctor',
+        path: 'apply-doctor',
         icon: FaUserDoctor
     },
 
